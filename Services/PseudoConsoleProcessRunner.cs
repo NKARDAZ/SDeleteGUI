@@ -43,15 +43,17 @@ internal static class PseudoConsoleProcessRunner
 			var exitTcs = new TaskCompletionSource<int>(
 				TaskCreationOptions.RunContinuationsAsynchronously);
 
-			terminal.ProcessExited += (_, e) =>
-			{
-				exitTcs.TrySetResult(e.ExitCode);
-				readCts.Cancel();
-			};
+			terminal.ProcessExited += (_, e) => exitTcs.TrySetResult(e.ExitCode);
+
+			long chunkCounter = 0;
 
 			var readTask = Task.Run(async () =>
 			{
 				var buffer = new byte[1024];
+
+				var decoder = Encoding.UTF8.GetDecoder();
+				var chars = new char[Encoding.UTF8.GetMaxCharCount(buffer.Length)];
+
 				try
 				{
 					while (!readCts.IsCancellationRequested)
@@ -62,11 +64,20 @@ internal static class PseudoConsoleProcessRunner
 
 						if (read == 0) break;
 
-						var text = Encoding.UTF8.GetString(buffer, 0, read);
-						onOutput(text);
+						Interlocked.Increment(ref chunkCounter);
+
+						var charCount = decoder.GetChars(buffer, 0, read, chars, 0);
+						if (charCount > 0)
+							onOutput(new string(chars, 0, charCount));
 					}
 				}
 				catch (OperationCanceledException)
+				{
+				}
+				catch (IOException)
+				{
+				}
+				catch (ObjectDisposedException)
 				{
 				}
 			});
@@ -74,6 +85,17 @@ internal static class PseudoConsoleProcessRunner
 			int exitCode = await exitTcs.Task
 				.WaitAsync(cancellationToken)
 				.ConfigureAwait(false);
+
+			while (!readTask.IsCompleted)
+			{
+				var before = Interlocked.Read(ref chunkCounter);
+				var finished = await Task.WhenAny(readTask, Task.Delay(300)).ConfigureAwait(false);
+
+				if (finished == readTask || Interlocked.Read(ref chunkCounter) == before)
+					break;
+			}
+
+			readCts.Cancel();
 
 			try
 			{

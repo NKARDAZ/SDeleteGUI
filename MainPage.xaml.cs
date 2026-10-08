@@ -772,7 +772,7 @@ public sealed partial class MainPage : Page
 			SetRowDeletedVisual(entry, true);
 		}
 
-		RefreshCommandPreview();
+		// RefreshCommandPreview();
 		RecalculatePathStats();
 	}
 
