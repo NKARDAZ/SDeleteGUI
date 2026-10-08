@@ -658,33 +658,65 @@ public sealed partial class MainPage : Page
 		RecalculatePathStats();
 	}
 
+	private static readonly SemaphoreSlim IconLoadGate = new(3);
+
 	private static async Task LoadPathIconAsync(PathEntry entry, Image image, FontIcon fallback)
 	{
+		var path = entry.Path;
+		var isDirectory = entry.IsDirectory;
+
+		const int attempts = 3;
+		for (var attempt = 1; attempt <= attempts; attempt++)
+		{
+			var bitmap = await TryLoadThumbnailAsync(path, isDirectory);
+			if (bitmap is not null)
+			{
+				if (entry.Path == path)
+				{
+					image.Source = bitmap;
+					image.Visibility = Visibility.Visible;
+					fallback.Visibility = Visibility.Collapsed;
+				}
+				return;
+			}
+
+			if (attempt < attempts)
+				await Task.Delay(attempt * 250);
+		}
+	}
+
+	private static async Task<Microsoft.UI.Xaml.Media.Imaging.BitmapImage?> TryLoadThumbnailAsync(
+		string path, bool isDirectory)
+	{
+		await IconLoadGate.WaitAsync();
 		try
 		{
 			Windows.Storage.IStorageItemProperties item;
-			if (entry.IsDirectory)
-				item = await Windows.Storage.StorageFolder.GetFolderFromPathAsync(entry.Path);
+			if (isDirectory)
+				item = await Windows.Storage.StorageFolder.GetFolderFromPathAsync(path);
 			else
-				item = await Windows.Storage.StorageFile.GetFileFromPathAsync(entry.Path);
+				item = await Windows.Storage.StorageFile.GetFileFromPathAsync(path);
 
 			using var thumbnail = await item.GetThumbnailAsync(
 				Windows.Storage.FileProperties.ThumbnailMode.ListView,
 				32,
 				Windows.Storage.FileProperties.ThumbnailOptions.UseCurrentScale);
 
-			if (thumbnail is null)
-				return;
+			if (thumbnail is null || thumbnail.Size == 0)
+				return null;
 
 			var bitmap = new Microsoft.UI.Xaml.Media.Imaging.BitmapImage();
 			await bitmap.SetSourceAsync(thumbnail);
-
-			image.Source = bitmap;
-			image.Visibility = Visibility.Visible;
-			fallback.Visibility = Visibility.Collapsed;
+			return bitmap;
 		}
-		catch
+		catch (Exception ex)
 		{
+			Debug.WriteLine($"[PathIcon] failed for '{path}': {ex.Message}");
+			return null;
+		}
+		finally
+		{
+			IconLoadGate.Release();
 		}
 	}
 
