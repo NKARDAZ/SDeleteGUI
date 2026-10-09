@@ -1,12 +1,14 @@
-<img src="Assets/AppIcon.svg" width="96" align="right">
-
 # Secure Delete Interface
+
+<img src="Assets/AppIcon.svg" width="96" align="right">
 
 A WinUI 3 wrapper around Sysinternals SDelete. It provides a graphical
 interface for the same command-line tool: pick files or drives, set the
 flags, and see the output as it appears.
 
-<img src="Media/SDEL001.png" width="350"> <img src="Media/SDEL002.png" width="350">
+<img src="Media/SDEL001.png" width="750">
+
+<img src="Media/SDEL002.png" width="750">
 
 ## What it does
 
