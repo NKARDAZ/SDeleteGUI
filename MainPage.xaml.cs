@@ -1449,4 +1449,11 @@ public sealed partial class MainPage : Page
 
 		AppNotifier.NotifyCompleted(title, Loc.Format("NotifyBody", elapsed.ToString(@"hh\:mm\:ss")));
 	}
+
+	private const double MinContentHeight = 760;
+
+	private void RootScroll_SizeChanged(object sender, SizeChangedEventArgs e)
+	{
+		RootGrid.Height = Math.Max(e.NewSize.Height, MinContentHeight);
+	}
 }

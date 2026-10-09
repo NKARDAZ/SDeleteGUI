@@ -71,362 +71,368 @@
         </Style>
     </Page.Resources>
 
-    <Grid Padding="16" RowSpacing="12"
-      Background="Transparent"
-      AllowDrop="True"
-      DragOver="RootGrid_DragOver"
-      Drop="RootGrid_Drop">
-        <Grid.RowDefinitions>
-            <!-- Tabs -->
-            <RowDefinition Height="Auto"/>
-            <!-- Common options -->
-            <RowDefinition Height="Auto"/>
-            <!-- Console output -->
-            <RowDefinition Height="*" MinHeight="150"/>
-            <!-- Status bar -->
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
 
-        <!-- Tabs -->
-        <Pivot Grid.Row="0" x:Name="MainPivot" Padding="0" Margin="-12,0,-12,0"
-              SelectionChanged="OnPivotSelectionChanged">
-            <!-- File deletion tab -->
-            <PivotItem x:Uid="FileDeletionTab">
-                <Grid RowSpacing="12">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
+    <ScrollViewer x:Name="RootScroll"
+                  VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Disabled"
+                  SizeChanged="RootScroll_SizeChanged">
+      <Grid x:Name="RootGrid" Padding="16" RowSpacing="12"
+        Background="Transparent"
+        AllowDrop="True"
+        DragOver="RootGrid_DragOver"
+        Drop="RootGrid_Drop">
+          <Grid.RowDefinitions>
+              <!-- Tabs -->
+              <RowDefinition Height="Auto"/>
+              <!-- Common options -->
+              <RowDefinition Height="Auto"/>
+              <!-- Console output -->
+              <RowDefinition Height="*" MinHeight="150"/>
+              <!-- Status bar -->
+              <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
 
-                    <Border Grid.Row="0"
-                            Height="270"
-                            BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
-                            BorderThickness="1"
-                            CornerRadius="8"
-                            Padding="12">
-                        <Grid RowSpacing="8">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
+          <!-- Tabs -->
+          <Pivot Grid.Row="0" x:Name="MainPivot" Padding="0" Margin="-12,0,-12,0"
+                SelectionChanged="OnPivotSelectionChanged">
+              <!-- File deletion tab -->
+              <PivotItem x:Uid="FileDeletionTab">
+                  <Grid RowSpacing="12">
+                      <Grid.RowDefinitions>
+                          <RowDefinition Height="Auto"/>
+                          <RowDefinition Height="Auto"/>
+                      </Grid.RowDefinitions>
 
-                            <TextBlock Grid.Row="0" x:Uid="PathsHeader" FontWeight="SemiBold"/>
+                      <Border Grid.Row="0"
+                              Height="270"
+                              BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
+                              BorderThickness="1"
+                              CornerRadius="8"
+                              Padding="12">
+                          <Grid RowSpacing="8">
+                              <Grid.RowDefinitions>
+                                  <RowDefinition Height="Auto"/>
+                                  <RowDefinition Height="*"/>
+                                  <RowDefinition Height="Auto"/>
+                              </Grid.RowDefinitions>
 
-                            <ScrollViewer Grid.Row="1"
-                                          VerticalScrollBarVisibility="Auto"
-                                          HorizontalScrollBarVisibility="Disabled">
-                                <StackPanel x:Name="PathsPanel" Spacing="8">
-                                    <TextBlock x:Name="EmptyPathsHint"
-                                              x:Uid="EmptyPathsHint"
-                                              Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                </StackPanel>
-                            </ScrollViewer>
+                              <TextBlock Grid.Row="0" x:Uid="PathsHeader" FontWeight="SemiBold"/>
 
-                            <Grid Grid.Row="2" ColumnSpacing="12">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
+                              <ScrollViewer Grid.Row="1"
+                                            VerticalScrollBarVisibility="Auto"
+                                            HorizontalScrollBarVisibility="Disabled">
+                                  <StackPanel x:Name="PathsPanel" Spacing="8">
+                                      <TextBlock x:Name="EmptyPathsHint"
+                                                x:Uid="EmptyPathsHint"
+                                                Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                                  </StackPanel>
+                              </ScrollViewer>
 
-                                <StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="8">
-                                    <Button x:Name="AddFilesButton" x:Uid="AddFilesButton" Click="AddFiles_Click"/>
-                                    <Button x:Name="AddFolderButton" x:Uid="AddFolderButton" Click="AddFolder_Click"/>
-                                    <Button x:Name="ClearPathsButton" x:Uid="ClearPathsButton" Click="ClearPathsButton_Click"/>
-                                </StackPanel>
+                              <Grid Grid.Row="2" ColumnSpacing="12">
+                                  <Grid.ColumnDefinitions>
+                                      <ColumnDefinition Width="Auto"/>
+                                      <ColumnDefinition Width="*"/>
+                                  </Grid.ColumnDefinitions>
 
-                                <TextBlock x:Name="PathsStatsText"
-                                          Grid.Column="1"
-                                          HorizontalAlignment="Right"
-                                          VerticalAlignment="Center"
-                                          TextTrimming="CharacterEllipsis"
-                                          Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                            </Grid>
-                        </Grid>
-                    </Border>
+                                  <StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="8">
+                                      <Button x:Name="AddFilesButton" x:Uid="AddFilesButton" Click="AddFiles_Click"/>
+                                      <Button x:Name="AddFolderButton" x:Uid="AddFolderButton" Click="AddFolder_Click"/>
+                                      <Button x:Name="ClearPathsButton" x:Uid="ClearPathsButton" Click="ClearPathsButton_Click"/>
+                                  </StackPanel>
 
-                    <!-- File deletion flags -->
-                    <Border Grid.Row="1"
-                            Height="64"
-                            BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
-                            BorderThickness="1"
-                            CornerRadius="8"
-                            Padding="12">
-                      <StackPanel Orientation="Horizontal" Spacing="24" VerticalAlignment="Center">
-                          <CheckBox x:Name="RecurseCheckBox" x:Uid="RecurseCheckBox"
-                                    Checked="OnOptionChanged" Unchecked="OnOptionChanged"/> <!-- -s -->
-                          <CheckBox x:Name="RemoveReadOnlyCheckBox" x:Uid="RemoveReadOnlyCheckBox"
-                                    Checked="OnOptionChanged" Unchecked="OnOptionChanged"/> <!-- -r -->
-                      </StackPanel>
-                    </Border>
-                </Grid>
-            </PivotItem>
+                                  <TextBlock x:Name="PathsStatsText"
+                                            Grid.Column="1"
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Center"
+                                            TextTrimming="CharacterEllipsis"
+                                            Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                              </Grid>
+                          </Grid>
+                      </Border>
 
-            <!-- Clean free space tab -->
-            <PivotItem x:Uid="CleanFreeSpaceTab">
-                <Grid RowSpacing="12">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
+                      <!-- File deletion flags -->
+                      <Border Grid.Row="1"
+                              Height="64"
+                              BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
+                              BorderThickness="1"
+                              CornerRadius="8"
+                              Padding="12">
+                        <StackPanel Orientation="Horizontal" Spacing="24" VerticalAlignment="Center">
+                            <CheckBox x:Name="RecurseCheckBox" x:Uid="RecurseCheckBox"
+                                      Checked="OnOptionChanged" Unchecked="OnOptionChanged"/> <!-- -s -->
+                            <CheckBox x:Name="RemoveReadOnlyCheckBox" x:Uid="RemoveReadOnlyCheckBox"
+                                      Checked="OnOptionChanged" Unchecked="OnOptionChanged"/> <!-- -r -->
+                        </StackPanel>
+                      </Border>
+                  </Grid>
+              </PivotItem>
 
-                    <!-- Drives list -->
-                    <Border Grid.Row="0"
-                            Height="270"
-                            BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
-                            BorderThickness="1"
-                            CornerRadius="8"
-                            Padding="12">
-                        <Grid RowSpacing="8">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+              <!-- Clean free space tab -->
+              <PivotItem x:Uid="CleanFreeSpaceTab">
+                  <Grid RowSpacing="12">
+                      <Grid.RowDefinitions>
+                          <RowDefinition Height="Auto"/>
+                          <RowDefinition Height="Auto"/>
+                      </Grid.RowDefinitions>
 
-                            <TextBlock Grid.Row="0" Grid.Column="0" x:Uid="DrivesHeader" FontWeight="SemiBold" VerticalAlignment="Center"/>
-                            <Button Grid.Row="0" Grid.Column="1"
-                                    x:Name="RefreshDrivesButton"
-                                    x:Uid="RefreshDrivesButton"
-                                    Click="RefreshDrivesButton_Click"/>
+                      <!-- Drives list -->
+                      <Border Grid.Row="0"
+                              Height="270"
+                              BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
+                              BorderThickness="1"
+                              CornerRadius="8"
+                              Padding="12">
+                          <Grid RowSpacing="8">
+                              <Grid.RowDefinitions>
+                                  <RowDefinition Height="Auto"/>
+                                  <RowDefinition Height="*"/>
+                              </Grid.RowDefinitions>
+                              <Grid.ColumnDefinitions>
+                                  <ColumnDefinition Width="*"/>
+                                  <ColumnDefinition Width="Auto"/>
+                              </Grid.ColumnDefinitions>
 
-                            <GridView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-                                      x:Name="DrivesGridView"
-                                      SelectionMode="Multiple"
-                                      IsItemClickEnabled="False"
-                                      SelectionChanged="OnDrivesSelectionChanged"
-                                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                                      ScrollViewer.VerticalScrollBarVisibility="Auto">
-                                <GridView.ItemsPanel>
-                                    <ItemsPanelTemplate>
-                                        <ItemsWrapGrid Orientation="Horizontal" ItemWidth="174" ItemHeight="100"/>
-                                    </ItemsPanelTemplate>
-                                </GridView.ItemsPanel>
-                                <GridView.ItemTemplate>
-                                    <DataTemplate>
-                                        <Grid Width="152" Height="88" Padding="0,4,0,0">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                            </Grid.RowDefinitions>
+                              <TextBlock Grid.Row="0" Grid.Column="0" x:Uid="DrivesHeader" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                              <Button Grid.Row="0" Grid.Column="1"
+                                      x:Name="RefreshDrivesButton"
+                                      x:Uid="RefreshDrivesButton"
+                                      Click="RefreshDrivesButton_Click"/>
 
-                                            <StackPanel Orientation="Horizontal" Spacing="4" HorizontalAlignment="Left" VerticalAlignment="Top">
-                                                <TextBlock Text="{Binding DriveLetter}"
-                                                          FontWeight="SemiBold"
-                                                          Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                                <TextBlock Text="{Binding TypeLabel}"
-                                                          Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                            </StackPanel>
+                              <GridView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                                        x:Name="DrivesGridView"
+                                        SelectionMode="Multiple"
+                                        IsItemClickEnabled="False"
+                                        SelectionChanged="OnDrivesSelectionChanged"
+                                        ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                        ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                  <GridView.ItemsPanel>
+                                      <ItemsPanelTemplate>
+                                          <ItemsWrapGrid Orientation="Horizontal" ItemWidth="174" ItemHeight="100"/>
+                                      </ItemsPanelTemplate>
+                                  </GridView.ItemsPanel>
+                                  <GridView.ItemTemplate>
+                                      <DataTemplate>
+                                          <Grid Width="152" Height="88" Padding="0,4,0,0">
+                                              <Grid.RowDefinitions>
+                                                  <RowDefinition Height="Auto"/>
+                                                  <RowDefinition Height="Auto"/>
+                                                  <RowDefinition Height="Auto"/>
+                                                  <RowDefinition Height="Auto"/>
+                                              </Grid.RowDefinitions>
 
-                                            <FontIcon Grid.Row="0"
-                                                      Glyph="{Binding Glyph}"
-                                                      FontSize="28"
-                                                      HorizontalAlignment="Center"
-                                                      Margin="0,2,0,0"/>
+                                              <StackPanel Orientation="Horizontal" Spacing="4" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                                  <TextBlock Text="{Binding DriveLetter}"
+                                                            FontWeight="SemiBold"
+                                                            Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                                                  <TextBlock Text="{Binding TypeLabel}"
+                                                            Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                                              </StackPanel>
 
-                                            <TextBlock Grid.Row="1"
-                                                      Text="{Binding DisplayName}"
-                                                      TextAlignment="Center"
-                                                      TextWrapping="NoWrap"
-                                                      Margin="0,2,0,0"/>
-
-                                            <TextBlock Grid.Row="2"
-                                                      Text="{Binding CapacityText}"
-                                                      TextAlignment="Center"
-                                                      Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-
-                                            <ProgressBar Grid.Row="3"
-                                                        Value="{Binding UsedPercent}"
-                                                        Minimum="0"
-                                                        Maximum="150"
-                                                        Height="6"
+                                              <FontIcon Grid.Row="0"
+                                                        Glyph="{Binding Glyph}"
+                                                        FontSize="28"
+                                                        HorizontalAlignment="Center"
                                                         Margin="0,2,0,0"/>
-                                        </Grid>
-                                    </DataTemplate>
-                                </GridView.ItemTemplate>
-                            </GridView>
-                            <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-                                      x:Name="EmptyDrivesHint"
-                                      HorizontalAlignment="Center"
-                                      VerticalAlignment="Top"
-                                      Margin="0,24,0,0"
-                                      TextWrapping="Wrap"
-                                      Foreground="{ThemeResource TextFillColorSecondaryBrush}"
-                                      Visibility="Collapsed"/>
-                        </Grid>
-                    </Border>
 
-                    <!-- Clean mode flags -->
-                    <Border Grid.Row="1"
-                            Height="64"
-                            BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
-                            BorderThickness="1"
-                            CornerRadius="8"
-                            Padding="12">
-                      <StackPanel Orientation="Horizontal" Spacing="12" VerticalAlignment="Center">
-                          <TextBlock x:Uid="CleanModeLabel" VerticalAlignment="Center"/>
-                          <RadioButton x:Name="ZeroFillRadio" x:Uid="ZeroFillRadio" GroupName="CleanMode" Checked="OnOptionChanged" Unchecked="OnOptionChanged"/> <!-- -z -->
-                          <RadioButton x:Name="CleanFreeRadio" x:Uid="CleanFreeRadio" GroupName="CleanMode" IsChecked="True" Checked="OnOptionChanged" Unchecked="OnOptionChanged"/> <!-- -c -->
-                          <CheckBox x:Name="HideNotRecommendedCheckBox" x:Uid="HideNotRecommendedCheckBox"
-                                    IsChecked="True"
-                                    Checked="OnHideNotRecommendedChanged" Unchecked="OnHideNotRecommendedChanged"/>
+                                              <TextBlock Grid.Row="1"
+                                                        Text="{Binding DisplayName}"
+                                                        TextAlignment="Center"
+                                                        TextWrapping="NoWrap"
+                                                        Margin="0,2,0,0"/>
+
+                                              <TextBlock Grid.Row="2"
+                                                        Text="{Binding CapacityText}"
+                                                        TextAlignment="Center"
+                                                        Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+
+                                              <ProgressBar Grid.Row="3"
+                                                          Value="{Binding UsedPercent}"
+                                                          Minimum="0"
+                                                          Maximum="150"
+                                                          Height="6"
+                                                          Margin="0,2,0,0"/>
+                                          </Grid>
+                                      </DataTemplate>
+                                  </GridView.ItemTemplate>
+                              </GridView>
+                              <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                                        x:Name="EmptyDrivesHint"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Top"
+                                        Margin="0,24,0,0"
+                                        TextWrapping="Wrap"
+                                        Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                        Visibility="Collapsed"/>
+                          </Grid>
+                      </Border>
+
+                      <!-- Clean mode flags -->
+                      <Border Grid.Row="1"
+                              Height="64"
+                              BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
+                              BorderThickness="1"
+                              CornerRadius="8"
+                              Padding="12">
+                        <StackPanel Orientation="Horizontal" Spacing="12" VerticalAlignment="Center">
+                            <TextBlock x:Uid="CleanModeLabel" VerticalAlignment="Center"/>
+                            <RadioButton x:Name="ZeroFillRadio" x:Uid="ZeroFillRadio" GroupName="CleanMode" Checked="OnOptionChanged" Unchecked="OnOptionChanged"/> <!-- -z -->
+                            <RadioButton x:Name="CleanFreeRadio" x:Uid="CleanFreeRadio" GroupName="CleanMode" IsChecked="True" Checked="OnOptionChanged" Unchecked="OnOptionChanged"/> <!-- -c -->
+                            <CheckBox x:Name="HideNotRecommendedCheckBox" x:Uid="HideNotRecommendedCheckBox"
+                                      IsChecked="True"
+                                      Checked="OnHideNotRecommendedChanged" Unchecked="OnHideNotRecommendedChanged"/>
+                        </StackPanel>
+                      </Border>
+                  </Grid>
+              </PivotItem>
+          </Pivot>
+
+          <!-- Common options -->
+          <Border Grid.Row="1"
+                  BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
+                  BorderThickness="1"
+                  CornerRadius="8"
+                  Padding="12">
+              <StackPanel Spacing="12">
+
+                  <Grid ColumnSpacing="8">
+                      <Grid.ColumnDefinitions>
+                          <ColumnDefinition Width="Auto"/>
+                          <ColumnDefinition Width="*"/>
+                          <ColumnDefinition Width="Auto"/>
+                      </Grid.ColumnDefinitions>
+
+                      <TextBlock Grid.Column="0" x:Uid="SdeleteFolderLabel" VerticalAlignment="Center"/>
+                      <TextBox Grid.Column="1"
+                              x:Name="SdeleteFolderTextBox"
+                              x:Uid="SdeleteFolderTextBox"
+                              TextChanged="OnSdeleteFolderChanged"/>
+                      <Button Grid.Column="2"
+                              x:Name="BrowseSdeleteFolderButton"
+                              x:Uid="BrowseSdeleteFolderButton"
+                              MinWidth="120"
+                              Click="BrowseSdeleteFolderButton_Click"/>
+                  </Grid>
+
+                  <Grid ColumnSpacing="12">
+                      <Grid.ColumnDefinitions>
+                          <ColumnDefinition Width="Auto"/>
+                          <ColumnDefinition Width="*"/>
+                          <ColumnDefinition Width="Auto"/>
+                      </Grid.ColumnDefinitions>
+
+                      <CheckBox Grid.Column="0"
+                                x:Name="Use64BitCheckBox" x:Uid="Use64BitCheckBox"
+                                VerticalAlignment="Center"
+                                Checked="OnOptionChanged" Unchecked="OnOptionChanged"/>
+
+                      <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center"
+                                  HorizontalAlignment="Right">
+                          <TextBlock x:Uid="PassesLabel" VerticalAlignment="Center"/>
+                          <NumberBox x:Name="PassesNumberBox"
+                                    Value="3"
+                                    Minimum="1"
+                                    SpinButtonPlacementMode="Inline"
+                                    Width="160"
+                                    ValueChanged="OnPassesChanged"/>
                       </StackPanel>
-                    </Border>
-                </Grid>
-            </PivotItem>
-        </Pivot>
 
-        <!-- Common options -->
-        <Border Grid.Row="1"
-                BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
-                BorderThickness="1"
-                CornerRadius="8"
-                Padding="12">
-            <StackPanel Spacing="12">
+                      <Button Grid.Column="2"
+                              x:Name="RunButton"
+                              Click="RunButton_Click"
+                              MinWidth="120"
+                              VerticalAlignment="Stretch"
+                              Style="{StaticResource AccentButtonStyle}"/>
+                  </Grid>
+              </StackPanel>
+          </Border>
 
-                <Grid ColumnSpacing="8">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
+          <!-- Console output -->
+          <Border Grid.Row="2"
+                  Background="{ThemeResource ControlFillColorDefaultBrush}"
+                  BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
+                  BorderThickness="1"
+                  CornerRadius="8"
+                  Padding="8">
+              <TextBox x:Name="OutputTextBox"
+                      IsReadOnly="True"
+                      AcceptsReturn="True"
+                      TextWrapping="Wrap"
+                      BorderThickness="0"
+                      Background="Transparent"
+                      FontFamily="Consolas"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto">
+                  <TextBox.Resources>
+                      <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="Transparent"/>
+                      <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="Transparent"/>
+                  </TextBox.Resources>
+              </TextBox>
+          </Border>
 
-                    <TextBlock Grid.Column="0" x:Uid="SdeleteFolderLabel" VerticalAlignment="Center"/>
-                    <TextBox Grid.Column="1"
-                            x:Name="SdeleteFolderTextBox"
-                            x:Uid="SdeleteFolderTextBox"
-                            TextChanged="OnSdeleteFolderChanged"/>
-                    <Button Grid.Column="2"
-                            x:Name="BrowseSdeleteFolderButton"
-                            x:Uid="BrowseSdeleteFolderButton"
-                            MinWidth="120"
-                            Click="BrowseSdeleteFolderButton_Click"/>
-                </Grid>
+          <ContentDialog x:Name="ConfirmDialog"
+                        x:Uid="ConfirmDialog"
+                        DefaultButton="Close"
+                        IsPrimaryButtonEnabled="False">
+              <TextBlock x:Name="ConfirmDialogText" TextWrapping="Wrap"/>
+          </ContentDialog>
 
-                <Grid ColumnSpacing="12">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
+          <!-- Status bar -->
+          <Border Grid.Row="3"
+                  Padding="12,6"
+                  BorderThickness="0,1,0,0"
+                  BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}">
+              <Grid>
+                  <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="Auto"/>
+                      <ColumnDefinition Width="Auto"/>
+                      <ColumnDefinition Width="*"/>
+                      <ColumnDefinition Width="Auto"/>
+                      <ColumnDefinition Width="Auto"/>
+                  </Grid.ColumnDefinitions>
 
-                    <CheckBox Grid.Column="0"
-                              x:Name="Use64BitCheckBox" x:Uid="Use64BitCheckBox"
-                              VerticalAlignment="Center"
-                              Checked="OnOptionChanged" Unchecked="OnOptionChanged"/>
+                  <FontIcon x:Name="StatusIcon"
+                            Grid.Column="0"
+                            Glyph="&#xE945;"
+                            FontSize="14"
+                            Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                            VerticalAlignment="Center"/>
 
-                    <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center"
-                                HorizontalAlignment="Right">
-                        <TextBlock x:Uid="PassesLabel" VerticalAlignment="Center"/>
-                        <NumberBox x:Name="PassesNumberBox"
-                                  Value="3"
-                                  Minimum="1"
-                                  SpinButtonPlacementMode="Inline"
-                                  Width="160"
-                                  ValueChanged="OnPassesChanged"/>
-                    </StackPanel>
+                  <ProgressRing x:Name="StatusProgressRing"
+                                Grid.Column="1"
+                                Width="14"
+                                Height="14"
+                                Margin="8,0,0,0"
+                                IsActive="False"
+                                Visibility="Collapsed"
+                                VerticalAlignment="Center"/>
 
-                    <Button Grid.Column="2"
-                            x:Name="RunButton"
-                            Click="RunButton_Click"
-                            MinWidth="120"
-                            VerticalAlignment="Stretch"
-                            Style="{StaticResource AccentButtonStyle}"/>
-                </Grid>
-            </StackPanel>
-        </Border>
+                  <TextBlock x:Name="StatusTimerText"
+                            Grid.Column="2"
+                            Margin="8,0,0,0"
+                            VerticalAlignment="Center"
+                            Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
 
-        <!-- Console output -->
-        <Border Grid.Row="2"
-                Background="{ThemeResource ControlFillColorDefaultBrush}"
-                BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
-                BorderThickness="1"
-                CornerRadius="8"
-                Padding="8">
-            <TextBox x:Name="OutputTextBox"
-                    IsReadOnly="True"
-                    AcceptsReturn="True"
-                    TextWrapping="Wrap"
-                    BorderThickness="0"
-                    Background="Transparent"
-                    FontFamily="Consolas"
-                    ScrollViewer.VerticalScrollBarVisibility="Auto">
-                <TextBox.Resources>
-                    <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="Transparent"/>
-                    <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="Transparent"/>
-                </TextBox.Resources>
-            </TextBox>
-        </Border>
-
-        <ContentDialog x:Name="ConfirmDialog"
-                      x:Uid="ConfirmDialog"
-                      DefaultButton="Close"
-                      IsPrimaryButtonEnabled="False">
-            <TextBlock x:Name="ConfirmDialogText" TextWrapping="Wrap"/>
-        </ContentDialog>
-
-        <!-- Status bar -->
-        <Border Grid.Row="3"
-                Padding="12,6"
-                BorderThickness="0,1,0,0"
-                BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <FontIcon x:Name="StatusIcon"
-                          Grid.Column="0"
-                          Glyph="&#xE945;"
-                          FontSize="14"
-                          Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                  <InfoBar x:Name="SdeleteNotFoundInfoBar"
+                          Grid.Column="2"
+                          Severity="Error"
+                          IsOpen="False"
+                          IsClosable="False"
+                          IsIconVisible="True"
+                          Margin="16,0"
                           VerticalAlignment="Center"/>
 
-                <ProgressRing x:Name="StatusProgressRing"
-                              Grid.Column="1"
-                              Width="14"
-                              Height="14"
-                              Margin="8,0,0,0"
-                              IsActive="False"
-                              Visibility="Collapsed"
-                              VerticalAlignment="Center"/>
+                  <TextBlock x:Name="StatusVersionText"
+                            Grid.Column="3"
+                            Margin="0,0,12,0"
+                            VerticalAlignment="Center"
+                            Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
 
-                <TextBlock x:Name="StatusTimerText"
-                           Grid.Column="2"
-                           Margin="8,0,0,0"
-                           VerticalAlignment="Center"
-                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-
-                <InfoBar x:Name="SdeleteNotFoundInfoBar"
-                         Grid.Column="2"
-                         Severity="Error"
-                         IsOpen="False"
-                         IsClosable="False"
-                         IsIconVisible="True"
-                         Margin="16,0"
-                         VerticalAlignment="Center"/>
-
-                <TextBlock x:Name="StatusVersionText"
-                           Grid.Column="3"
-                           Margin="0,0,12,0"
-                           VerticalAlignment="Center"
-                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-
-                <HyperlinkButton x:Name="StatusAuthorLink"
-                                 Grid.Column="4"
-                                 NavigateUri="https://github.com/DemerNkardaz"
-                                 Padding="4,0"
-                                 VerticalAlignment="Center"/>
-            </Grid>
-        </Border>
-    </Grid>
+                  <HyperlinkButton x:Name="StatusAuthorLink"
+                                  Grid.Column="4"
+                                  NavigateUri="https://github.com/DemerNkardaz"
+                                  Padding="4,0"
+                                  VerticalAlignment="Center"/>
+              </Grid>
+          </Border>
+      </Grid>
+    </ScrollViewer>
 </Page>

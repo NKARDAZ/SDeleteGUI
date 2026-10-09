@@ -9,20 +9,12 @@ namespace SDeleteGUI.Services;
 /// </summary>
 internal static class SettingsService
 {
-    private const string VendorFolderName = "Nkardaz";
-    private const string AppFolderName = "SDeleteGUI";
-    private const string FileName = "settings.json";
-
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
         WriteIndented = true
     };
 
-    public static string SettingsFilePath => Path.Combine(
-        Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-        VendorFolderName,
-        AppFolderName,
-        FileName);
+    public static string SettingsFilePath => AppPaths.SettingsFilePath;
 
     public static AppSettings Load()
     {
@@ -61,16 +53,6 @@ internal static class SettingsService
         }
     }
 
-    private static void LogError(string source, Exception ex)
-    {
-        try
-        {
-            var log = $"{DateTime.Now} [{source}]: {ex}\n\n";
-            File.AppendAllText(
-                Path.Combine(AppContext.BaseDirectory, "crash.log"), log);
-        }
-        catch
-        {
-        }
-    }
+    private static void LogError(string source, Exception ex) =>
+        AppPaths.AppendCrashLog(source, ex);
 }

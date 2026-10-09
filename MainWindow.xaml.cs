@@ -2,6 +2,7 @@ using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.Windows.ApplicationModel.Resources;
+using System.Runtime.InteropServices;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -34,12 +35,12 @@ public sealed partial class MainWindow : Window
 
         if (AppWindow.Presenter is Microsoft.UI.Windowing.OverlappedPresenter presenter)
         {
-            AppWindow.Resize(new Windows.Graphics.SizeInt32(800, 900));
+            ApplyWindowSize();
 
             presenter.IsResizable = false;
 
             presenter.IsMaximizable = false;
-            presenter.IsMinimizable = false;
+            presenter.IsMinimizable = true;
         }
 
         // Navigate the root frame to the main page on startup.
@@ -78,4 +79,26 @@ public sealed partial class MainWindow : Window
             page.SaveSettingsOnClose();
         }
     }
+
+
+	[DllImport("user32.dll")]
+	private static extern uint GetDpiForWindow(IntPtr hWnd);
+
+	private void ApplyWindowSize()
+	{
+		const int designWidth = 800;
+		const int designHeight = 900;
+
+		var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+		var scale = GetDpiForWindow(hwnd) / 96.0;
+		var workArea = DisplayArea.GetFromWindowId(AppWindow.Id, DisplayAreaFallback.Primary).WorkArea;
+
+		var width = Math.Min((int)(designWidth * scale), workArea.Width);
+		var height = Math.Min((int)(designHeight * scale), workArea.Height);
+
+		AppWindow.Resize(new Windows.Graphics.SizeInt32(width, height));
+		AppWindow.Move(new Windows.Graphics.PointInt32(
+			workArea.X + (workArea.Width - width) / 2,
+			workArea.Y + (workArea.Height - height) / 2));
+	}
 }

@@ -76,15 +76,6 @@ public partial class App : Application
 
     private static void WriteCrashLog(string source, Exception? exception)
     {
-        try
-        {
-            var log = $"{DateTime.Now} [{source}]: {exception}\n\n";
-            System.IO.File.AppendAllText(
-                System.IO.Path.Combine(AppContext.BaseDirectory, "crash.log"), log);
-        }
-        catch
-        {
-			// Ignore any exceptions while writing the crash log
-		}
+        AppPaths.AppendCrashLog(source, exception);
     }
 }
