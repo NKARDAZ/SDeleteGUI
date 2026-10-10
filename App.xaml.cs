@@ -41,6 +41,7 @@ public partial class App : Application
 		StartupArguments = Environment.GetCommandLineArgs().Skip(1).ToArray();
 
 		// ApplicationLanguages.PrimaryLanguageOverride = "en-US";
+		// ApplicationLanguages.PrimaryLanguageOverride = "ja-JP";
         InitializeComponent();
 
 		AppNotifier.EnsureRegistered();

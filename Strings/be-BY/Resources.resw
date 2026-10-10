@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+    <data name="AppWindowTitle" xml:space="preserve">
+    <value>Інтэрфейс бяспечнага выдалення</value>
+  </data>
+  <data name="FileDeletionTab.Header" xml:space="preserve">
+    <value>Выдаленне файлаў</value>
+  </data>
+  <data name="CleanFreeSpaceTab.Header" xml:space="preserve">
+    <value>Ачыстка вольнага месца</value>
+  </data>
+  <data name="PathsHeader.Text" xml:space="preserve">
+    <value>Шляхі</value>
+  </data>
+  <data name="EmptyPathsHint.Text" xml:space="preserve">
+    <value>Шляхі не дададзены</value>
+  </data>
+  <data name="AddFilesButton.Content" xml:space="preserve">
+    <value>Дадаць файл(ы)</value>
+  </data>
+  <data name="AddFolderButton.Content" xml:space="preserve">
+    <value>Дадаць папку</value>
+  </data>
+  <data name="ClearPathsButton.Content" xml:space="preserve">
+    <value>Ачысціць</value>
+  </data>
+  <data name="RecurseCheckBox.Content" xml:space="preserve">
+    <value>Рэкурсіўна</value>
+  </data>
+  <data name="RemoveReadOnlyCheckBox.Content" xml:space="preserve">
+    <value>Здымаць атрыбут «толькі для чытання»</value>
+  </data>
+  <data name="DropToAddCaption" xml:space="preserve">
+    <value>Дадаць у спіс выдалення</value>
+  </data>
+  <data name="DrivesHeader.Text" xml:space="preserve">
+    <value>Дыскі і прылады</value>
+  </data>
+  <data name="RefreshDrivesButton.Content" xml:space="preserve">
+    <value>Абнавіць</value>
+  </data>
+  <data name="CleanModeLabel.Text" xml:space="preserve">
+    <value>Рэжым ачысткі:</value>
+  </data>
+  <data name="ZeroFillRadio.Content" xml:space="preserve">
+    <value>Запоўніць нулямі</value>
+  </data>
+  <data name="HideNotRecommendedCheckBox.Content" xml:space="preserve">
+    <value>Схаваць нерэкамендаванае</value>
+  </data>
+  <data name="EmptyDrivesHintFilteredText" xml:space="preserve">
+    <value>Усе дыскі схаваны фільтрам «Схаваць нерэкамендаванае». Зніміце сцяжок, каб убачыць іх.</value>
+  </data>
+  <data name="EmptyDrivesHintNoneText" xml:space="preserve">
+    <value>Дыскі не знойдзены.</value>
+  </data>
+  <data name="CleanFreeRadio.Content" xml:space="preserve">
+    <value>Ачысціць</value>
+  </data>
+  <data name="Use64BitCheckBox.Content" xml:space="preserve">
+    <value>64-разрадная версія</value>
+  </data>
+  <data name="PassesLabel.Text" xml:space="preserve">
+    <value>Праходаў:</value>
+  </data>
+  <data name="SdeleteFolderLabel.Text" xml:space="preserve">
+    <value>Папка з SDelete:</value>
+  </data>
+  <data name="SdeleteFolderTextBox.PlaceholderText" xml:space="preserve">
+    <value>Пакіньце пустым, калі SDelete ёсць у PATH</value>
+  </data>
+  <data name="BrowseSdeleteFolderButton.Content" xml:space="preserve">
+    <value>Агляд…</value>
+  </data>
+  <data name="ConfirmDialog.Title" xml:space="preserve">
+    <value>Пацвярджэнне</value>
+  </data>
+  <data name="ConfirmDialog.PrimaryButtonText" xml:space="preserve">
+    <value>Так</value>
+  </data>
+  <data name="ConfirmDialog.CloseButtonText" xml:space="preserve">
+    <value>Не</value>
+  </data>
+  <data name="RunButton" xml:space="preserve">
+    <value>Запусціць</value>
+  </data>
+  <data name="StopButton" xml:space="preserve">
+    <value>Перарваць</value>
+  </data>
+  <data name="LocalDisk" xml:space="preserve">
+    <value>Лакальны дыск</value>
+  </data>
+  <data name="ContentsOnlyCheckBox" xml:space="preserve">
+    <value>Толькі змесціва</value>
+  </data>
+  <data name="ChangePathButton" xml:space="preserve">
+    <value>Змяніць</value>
+  </data>
+  <data name="ValidationPassesTooSmall" xml:space="preserve">
+    <value>Колькасць праходаў павінна быць не менш за 1.</value>
+  </data>
+  <data name="ValidationNoPaths" xml:space="preserve">
+    <value>Дадайце хаця б адзін шлях для выдалення.</value>
+  </data>
+  <data name="ValidationNoDrives" xml:space="preserve">
+    <value>Выберыце хаця б адзін дыск.</value>
+  </data>
+  <data name="CommandCannotBeBuilt" xml:space="preserve">
+    <value>Каманду не атрымалася сфарміраваць:</value>
+  </data>
+  <data name="CommandBuildInternalError" xml:space="preserve">
+    <value>[Унутраная памылка пры пабудове каманды]</value>
+  </data>
+  <data name="ConfirmDialogDeleteFilesText" xml:space="preserve">
+    <value>Запуск гэтай каманды незваротна знішчыць абраныя файлы і папкі. Нават з дапамогай сродкаў аднаўлення выдаленых файлаў вы не здолееце іх аднавіць.
+
+Хочаце працягнуць?</value>
+  </data>
+  <data name="ConfirmDialogCleanFreeSpaceText" xml:space="preserve">
+    <value>Запуск гэтай каманды пачне ачыстку вольнага месца на абраных назапашвальніках. У залежнасці ад аб'ёму назапашвальніка і памеру вольнага месца працэс можа доўжыцца доўга — да 10 гадзін і больш.
+
+У гэты час не карыстайцеся абранымі назапашвальнікамі. Бяспечнае выдаленне часова запоўніць усё вольнае месца на іх.
+
+Заўвага: калі аперацыя будзе перапынена, на дыску могуць застацца часовыя файлы, якія займаюць усё вольнае месца. Іх трэба будзе выдаліць уручную (звычайна гэта файлы з імёнамі SDELTEMP, SDELMFT у корані дыска). Файлы могуць быць схаванымі.
+
+Хочаце працягнуць?</value>
+  </data>
+  <data name="ConfirmDialogYesCountdown" xml:space="preserve">
+    <value>Так ({0})</value>
+  </data>
+  <data name="ConfirmDialogYes" xml:space="preserve">
+    <value>Так</value>
+  </data>
+  <data name="CloseWhileRunningTitle" xml:space="preserve">
+    <value>Працэс выконваецца</value>
+  </data>
+  <data name="CloseWhileRunningText" xml:space="preserve">
+    <value>SDelete яшчэ працуе. Калі вы закрыеце акно, працэс будзе перарваны. Гэта можа пакінуць часовыя файлы на дыску.
+
+Хочаце перарваць і выйсці?</value>
+  </data>
+  <data name="CloseWhileRunningYes" xml:space="preserve">
+    <value>Перарваць і выйсці</value>
+  </data>
+  <data name="CloseWhileRunningNo" xml:space="preserve">
+    <value>Застацца</value>
+  </data>
+  <data name="SdeleteNotFound" xml:space="preserve">
+    <value>Не атрымалася знайсці выканальны файл SDelete</value>
+  </data>
+  <data name="RunCommandStarted" xml:space="preserve">
+    <value>~ Запуск каманды</value>
+  </data>
+  <data name="RunCommandCompleted" xml:space="preserve">
+    <value>~ Завершана з кодам {0}</value>
+  </data>
+  <data name="RunCommandError" xml:space="preserve">
+    <value>~ Памылка запуску: {0}</value>
+  </data>
+  <data name="OpenPathToolTip" xml:space="preserve">
+    <value>Паказаць у Правадыры</value>
+  </data>
+  <data name="BlockedPathsTitle" xml:space="preserve">
+    <value>Шлях не дададзены</value>
+  </data>
+  <data name="BlockedPathsText" xml:space="preserve">
+    <value>Немагчыма дадаць сістэмныя/крытычна важныя для працы сістэмы папкі або файлы ў спіс на выдаленне</value>
+  </data>
+  <data name="BlockedPathsMore" xml:space="preserve">
+    <value>…і яшчэ {0}</value>
+  </data>
+  <data name="BlockedPathsClose" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DriveTypeSsd" xml:space="preserve">
+    <value>SSD</value>
+  </data>
+  <data name="DriveTypeHdd" xml:space="preserve">
+    <value>HDD</value>
+  </data>
+  <data name="DriveTypeFlash" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="DriveTypeNetwork" xml:space="preserve">
+    <value>Сетка</value>
+  </data>
+  <data name="DriveTypeCdRom" xml:space="preserve">
+    <value>CD</value>
+  </data>
+  <data name="DriveTypeRam" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="FlashWarningTitle" xml:space="preserve">
+    <value>Папярэджанне</value>
+  </data>
+  <data name="FlashWarningText" xml:space="preserve">
+    <value>Вы выбралі {0}-назапашвальнік. Выкарыстанне SDelete на такіх назапашвальніках не гарантуе знішчэння даных. Ачыстка дыска можа значна паскорыць знос {0}-назапашвальніка.</value>
+  </data>
+  <data name="DialogOkButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PathsStats" xml:space="preserve">
+    <value>Файлаў: {0} · Папак: {1} · {2}</value>
+  </data>
+  <data name="PathsStatsCounting" xml:space="preserve">
+    <value>Падлік… файлаў: {0} · папак: {1} · {2}</value>
+  </data>
+  <data name="PathsStatsStopped" xml:space="preserve">
+    <value>Падлік перарваны: файлаў {0} · папак {1} · {2} (няпоўныя даныя)</value>
+  </data>
+  <data name="UnitB" xml:space="preserve">
+    <value>Б</value>
+  </data>
+  <data name="UnitKB" xml:space="preserve">
+    <value>КБ</value>
+  </data>
+  <data name="UnitTB" xml:space="preserve">
+    <value>ТБ</value>
+  </data>
+  <data name="UnitGB" xml:space="preserve">
+    <value>ГБ</value>
+  </data>
+  <data name="UnitMB" xml:space="preserve">
+    <value>МБ</value>
+  </data>
+  <data name="NotifyCompletedTitle" xml:space="preserve">
+    <value>Аперацыя завершана</value>
+  </data>
+  <data name="NotifyStoppedTitle" xml:space="preserve">
+    <value>Аперацыя спынена</value>
+  </data>
+  <data name="NotifyErrorTitle" xml:space="preserve">
+    <value>Аперацыя завершылася з памылкай</value>
+  </data>
+  <data name="NotifyBody" xml:space="preserve">
+    <value>Працягласць: {0}</value>
+  </data>
+  <data name="AuthorName" xml:space="preserve">
+    <value>Ялла Нкардаз</value>
+  </data>
+</root>

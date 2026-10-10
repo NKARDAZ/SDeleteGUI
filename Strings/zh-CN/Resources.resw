@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+    <data name="AppWindowTitle" xml:space="preserve">
+    <value>安全删除界面</value>
+  </data>
+  <data name="FileDeletionTab.Header" xml:space="preserve">
+    <value>删除文件</value>
+  </data>
+  <data name="CleanFreeSpaceTab.Header" xml:space="preserve">
+    <value>清理可用空间</value>
+  </data>
+  <data name="PathsHeader.Text" xml:space="preserve">
+    <value>路径</value>
+  </data>
+  <data name="EmptyPathsHint.Text" xml:space="preserve">
+    <value>尚未添加路径</value>
+  </data>
+  <data name="AddFilesButton.Content" xml:space="preserve">
+    <value>添加文件</value>
+  </data>
+  <data name="AddFolderButton.Content" xml:space="preserve">
+    <value>添加文件夹</value>
+  </data>
+  <data name="ClearPathsButton.Content" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="RecurseCheckBox.Content" xml:space="preserve">
+    <value>递归</value>
+  </data>
+  <data name="RemoveReadOnlyCheckBox.Content" xml:space="preserve">
+    <value>移除“只读”属性</value>
+  </data>
+  <data name="DropToAddCaption" xml:space="preserve">
+    <value>添加到删除列表</value>
+  </data>
+  <data name="DrivesHeader.Text" xml:space="preserve">
+    <value>驱动器和设备</value>
+  </data>
+  <data name="RefreshDrivesButton.Content" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="CleanModeLabel.Text" xml:space="preserve">
+    <value>清理模式：</value>
+  </data>
+  <data name="ZeroFillRadio.Content" xml:space="preserve">
+    <value>用零填充</value>
+  </data>
+  <data name="HideNotRecommendedCheckBox.Content" xml:space="preserve">
+    <value>隐藏不推荐项</value>
+  </data>
+  <data name="EmptyDrivesHintFilteredText" xml:space="preserve">
+    <value>所有驱动器均被“隐藏不推荐项”筛选器隐藏。取消勾选即可显示。</value>
+  </data>
+  <data name="EmptyDrivesHintNoneText" xml:space="preserve">
+    <value>未找到驱动器。</value>
+  </data>
+  <data name="CleanFreeRadio.Content" xml:space="preserve">
+    <value>清理</value>
+  </data>
+  <data name="Use64BitCheckBox.Content" xml:space="preserve">
+    <value>64 位版本</value>
+  </data>
+  <data name="PassesLabel.Text" xml:space="preserve">
+    <value>覆写次数：</value>
+  </data>
+  <data name="SdeleteFolderLabel.Text" xml:space="preserve">
+    <value>SDelete 所在目录：</value>
+  </data>
+  <data name="SdeleteFolderTextBox.PlaceholderText" xml:space="preserve">
+    <value>如果 SDelete 已在 PATH 中，请留空</value>
+  </data>
+  <data name="BrowseSdeleteFolderButton.Content" xml:space="preserve">
+    <value>浏览…</value>
+  </data>
+  <data name="ConfirmDialog.Title" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="ConfirmDialog.PrimaryButtonText" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="ConfirmDialog.CloseButtonText" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="RunButton" xml:space="preserve">
+    <value>运行</value>
+  </data>
+  <data name="StopButton" xml:space="preserve">
+    <value>中止</value>
+  </data>
+  <data name="LocalDisk" xml:space="preserve">
+    <value>本地磁盘</value>
+  </data>
+  <data name="ContentsOnlyCheckBox" xml:space="preserve">
+    <value>仅内容</value>
+  </data>
+  <data name="ChangePathButton" xml:space="preserve">
+    <value>更改</value>
+  </data>
+  <data name="ValidationPassesTooSmall" xml:space="preserve">
+    <value>覆写次数不能小于 1。</value>
+  </data>
+  <data name="ValidationNoPaths" xml:space="preserve">
+    <value>请至少添加一个要删除的路径。</value>
+  </data>
+  <data name="ValidationNoDrives" xml:space="preserve">
+    <value>请至少选择一个驱动器。</value>
+  </data>
+  <data name="CommandCannotBeBuilt" xml:space="preserve">
+    <value>无法生成命令：</value>
+  </data>
+  <data name="CommandBuildInternalError" xml:space="preserve">
+    <value>[生成命令时发生内部错误]</value>
+  </data>
+  <data name="ConfirmDialogDeleteFilesText" xml:space="preserve">
+    <value>运行此命令将不可逆地销毁所选的文件和文件夹。即使使用已删除文件恢复工具，也无法恢复它们。
+
+是否继续？</value>
+  </data>
+  <data name="ConfirmDialogCleanFreeSpaceText" xml:space="preserve">
+    <value>运行此命令将开始清理所选存储设备上的可用空间。根据存储设备的容量和可用空间大小，该过程可能耗时很长，最长可达 10 小时甚至更久。
+
+在此期间请勿使用所选存储设备。安全删除会暂时填满这些设备上的全部可用空间。
+
+注意：如果操作被中断，磁盘上可能会残留占满全部可用空间的临时文件。需要手动删除它们（通常是磁盘根目录中名为 SDELTEMP、SDELMFT 的文件）。这些文件可能是隐藏的。
+
+是否继续？</value>
+  </data>
+  <data name="ConfirmDialogYesCountdown" xml:space="preserve">
+    <value>是 ({0})</value>
+  </data>
+  <data name="ConfirmDialogYes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="CloseWhileRunningTitle" xml:space="preserve">
+    <value>进程正在运行</value>
+  </data>
+  <data name="CloseWhileRunningText" xml:space="preserve">
+    <value>SDelete 仍在运行。如果关闭窗口，进程将被中止，这可能会在磁盘上留下临时文件。
+
+是否中止并退出？</value>
+  </data>
+  <data name="CloseWhileRunningYes" xml:space="preserve">
+    <value>中止并退出</value>
+  </data>
+  <data name="CloseWhileRunningNo" xml:space="preserve">
+    <value>不退出</value>
+  </data>
+  <data name="SdeleteNotFound" xml:space="preserve">
+    <value>未找到 SDelete 可执行文件</value>
+  </data>
+  <data name="RunCommandStarted" xml:space="preserve">
+    <value>~ 正在运行命令</value>
+  </data>
+  <data name="RunCommandCompleted" xml:space="preserve">
+    <value>~ 已结束，退出代码 {0}</value>
+  </data>
+  <data name="RunCommandError" xml:space="preserve">
+    <value>~ 启动错误：{0}</value>
+  </data>
+  <data name="OpenPathToolTip" xml:space="preserve">
+    <value>在资源管理器中显示</value>
+  </data>
+  <data name="BlockedPathsTitle" xml:space="preserve">
+    <value>未添加路径</value>
+  </data>
+  <data name="BlockedPathsText" xml:space="preserve">
+    <value>无法将系统文件夹/文件或对系统运行至关重要的文件夹/文件添加到删除列表</value>
+  </data>
+  <data name="BlockedPathsMore" xml:space="preserve">
+    <value>…以及另外 {0} 项</value>
+  </data>
+  <data name="BlockedPathsClose" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DriveTypeSsd" xml:space="preserve">
+    <value>SSD</value>
+  </data>
+  <data name="DriveTypeHdd" xml:space="preserve">
+    <value>HDD</value>
+  </data>
+  <data name="DriveTypeFlash" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="DriveTypeNetwork" xml:space="preserve">
+    <value>网络</value>
+  </data>
+  <data name="DriveTypeCdRom" xml:space="preserve">
+    <value>CD</value>
+  </data>
+  <data name="DriveTypeRam" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="FlashWarningTitle" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="FlashWarningText" xml:space="preserve">
+    <value>您选择了 {0} 存储设备。在此类设备上使用 SDelete 无法保证数据被彻底销毁。清理磁盘可能会显著加快 {0} 存储设备的磨损。</value>
+  </data>
+  <data name="DialogOkButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PathsStats" xml:space="preserve">
+    <value>文件：{0} · 文件夹：{1} · {2}</value>
+  </data>
+  <data name="PathsStatsCounting" xml:space="preserve">
+    <value>正在统计… 文件：{0} · 文件夹：{1} · {2}</value>
+  </data>
+  <data name="PathsStatsStopped" xml:space="preserve">
+    <value>统计已中断：文件 {0} · 文件夹 {1} · {2}（数据不完整）</value>
+  </data>
+  <data name="UnitB" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="UnitKB" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="UnitTB" xml:space="preserve">
+    <value>TB</value>
+  </data>
+  <data name="UnitGB" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="UnitMB" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="NotifyCompletedTitle" xml:space="preserve">
+    <value>操作已完成</value>
+  </data>
+  <data name="NotifyStoppedTitle" xml:space="preserve">
+    <value>操作已停止</value>
+  </data>
+  <data name="NotifyErrorTitle" xml:space="preserve">
+    <value>操作失败</value>
+  </data>
+  <data name="NotifyBody" xml:space="preserve">
+    <value>耗时：{0}</value>
+  </data>
+  <data name="AuthorName" xml:space="preserve">
+    <value>Yalla Nkardaz</value>
+  </data>
+</root>

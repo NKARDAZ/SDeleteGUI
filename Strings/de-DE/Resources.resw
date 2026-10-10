@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+    <data name="AppWindowTitle" xml:space="preserve">
+    <value>Oberfläche für sicheres Löschen</value>
+  </data>
+  <data name="FileDeletionTab.Header" xml:space="preserve">
+    <value>Dateien löschen</value>
+  </data>
+  <data name="CleanFreeSpaceTab.Header" xml:space="preserve">
+    <value>Freien Speicherplatz bereinigen</value>
+  </data>
+  <data name="PathsHeader.Text" xml:space="preserve">
+    <value>Pfade</value>
+  </data>
+  <data name="EmptyPathsHint.Text" xml:space="preserve">
+    <value>Keine Pfade hinzugefügt</value>
+  </data>
+  <data name="AddFilesButton.Content" xml:space="preserve">
+    <value>Datei(en) hinzufügen</value>
+  </data>
+  <data name="AddFolderButton.Content" xml:space="preserve">
+    <value>Ordner hinzufügen</value>
+  </data>
+  <data name="ClearPathsButton.Content" xml:space="preserve">
+    <value>Leeren</value>
+  </data>
+  <data name="RecurseCheckBox.Content" xml:space="preserve">
+    <value>Rekursiv</value>
+  </data>
+  <data name="RemoveReadOnlyCheckBox.Content" xml:space="preserve">
+    <value>Attribut „Schreibgeschützt“ entfernen</value>
+  </data>
+  <data name="DropToAddCaption" xml:space="preserve">
+    <value>Zur Löschliste hinzufügen</value>
+  </data>
+  <data name="DrivesHeader.Text" xml:space="preserve">
+    <value>Laufwerke und Geräte</value>
+  </data>
+  <data name="RefreshDrivesButton.Content" xml:space="preserve">
+    <value>Aktualisieren</value>
+  </data>
+  <data name="CleanModeLabel.Text" xml:space="preserve">
+    <value>Bereinigungsmodus:</value>
+  </data>
+  <data name="ZeroFillRadio.Content" xml:space="preserve">
+    <value>Mit Nullen füllen</value>
+  </data>
+  <data name="HideNotRecommendedCheckBox.Content" xml:space="preserve">
+    <value>Nicht empfohlene ausblenden</value>
+  </data>
+  <data name="EmptyDrivesHintFilteredText" xml:space="preserve">
+    <value>Alle Laufwerke werden durch den Filter „Nicht empfohlene ausblenden“ ausgeblendet. Deaktivieren Sie das Kontrollkästchen, um sie anzuzeigen.</value>
+  </data>
+  <data name="EmptyDrivesHintNoneText" xml:space="preserve">
+    <value>Keine Laufwerke gefunden.</value>
+  </data>
+  <data name="CleanFreeRadio.Content" xml:space="preserve">
+    <value>Bereinigen</value>
+  </data>
+  <data name="Use64BitCheckBox.Content" xml:space="preserve">
+    <value>64-Bit-Version</value>
+  </data>
+  <data name="PassesLabel.Text" xml:space="preserve">
+    <value>Durchgänge:</value>
+  </data>
+  <data name="SdeleteFolderLabel.Text" xml:space="preserve">
+    <value>SDelete-Verzeichnis:</value>
+  </data>
+  <data name="SdeleteFolderTextBox.PlaceholderText" xml:space="preserve">
+    <value>Leer lassen, wenn SDelete im PATH liegt</value>
+  </data>
+  <data name="BrowseSdeleteFolderButton.Content" xml:space="preserve">
+    <value>Durchsuchen…</value>
+  </data>
+  <data name="ConfirmDialog.Title" xml:space="preserve">
+    <value>Bestätigung</value>
+  </data>
+  <data name="ConfirmDialog.PrimaryButtonText" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="ConfirmDialog.CloseButtonText" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="RunButton" xml:space="preserve">
+    <value>Starten</value>
+  </data>
+  <data name="StopButton" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="LocalDisk" xml:space="preserve">
+    <value>Lokaler Datenträger</value>
+  </data>
+  <data name="ContentsOnlyCheckBox" xml:space="preserve">
+    <value>Nur Inhalt</value>
+  </data>
+  <data name="ChangePathButton" xml:space="preserve">
+    <value>Ändern</value>
+  </data>
+  <data name="ValidationPassesTooSmall" xml:space="preserve">
+    <value>Die Anzahl der Durchgänge muss mindestens 1 betragen.</value>
+  </data>
+  <data name="ValidationNoPaths" xml:space="preserve">
+    <value>Fügen Sie mindestens einen Pfad zum Löschen hinzu.</value>
+  </data>
+  <data name="ValidationNoDrives" xml:space="preserve">
+    <value>Wählen Sie mindestens ein Laufwerk aus.</value>
+  </data>
+  <data name="CommandCannotBeBuilt" xml:space="preserve">
+    <value>Der Befehl kann nicht erstellt werden:</value>
+  </data>
+  <data name="CommandBuildInternalError" xml:space="preserve">
+    <value>[Interner Fehler beim Erstellen des Befehls]</value>
+  </data>
+  <data name="ConfirmDialogDeleteFilesText" xml:space="preserve">
+    <value>Das Ausführen dieses Befehls vernichtet die ausgewählten Dateien und Ordner unwiderruflich. Selbst mit Wiederherstellungswerkzeugen für gelöschte Dateien können Sie sie nicht wiederherstellen.
+
+Möchten Sie fortfahren?</value>
+  </data>
+  <data name="ConfirmDialogCleanFreeSpaceText" xml:space="preserve">
+    <value>Das Ausführen dieses Befehls startet die Bereinigung des freien Speicherplatzes auf den ausgewählten Laufwerken. Abhängig von der Größe des Laufwerks und des freien Speicherplatzes kann der Vorgang lange dauern, bis zu 10 Stunden und mehr.
+
+Verwenden Sie die ausgewählten Laufwerke während dieser Zeit nicht. Das sichere Löschen füllt den gesamten freien Speicherplatz auf ihnen vorübergehend auf.
+
+Hinweis: Wird der Vorgang abgebrochen, können auf dem Laufwerk temporäre Dateien zurückbleiben, die den gesamten freien Speicherplatz belegen. Sie müssen dann manuell gelöscht werden (in der Regel sind das Dateien mit den Namen SDELTEMP und SDELMFT im Stammverzeichnis des Laufwerks). Die Dateien können ausgeblendet sein.
+
+Möchten Sie fortfahren?</value>
+  </data>
+  <data name="ConfirmDialogYesCountdown" xml:space="preserve">
+    <value>Ja ({0})</value>
+  </data>
+  <data name="ConfirmDialogYes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="CloseWhileRunningTitle" xml:space="preserve">
+    <value>Vorgang läuft</value>
+  </data>
+  <data name="CloseWhileRunningText" xml:space="preserve">
+    <value>SDelete läuft noch. Wenn Sie das Fenster schließen, wird der Vorgang abgebrochen. Dabei können temporäre Dateien auf dem Laufwerk zurückbleiben.
+
+Möchten Sie abbrechen und beenden?</value>
+  </data>
+  <data name="CloseWhileRunningYes" xml:space="preserve">
+    <value>Abbrechen und beenden</value>
+  </data>
+  <data name="CloseWhileRunningNo" xml:space="preserve">
+    <value>Nicht beenden</value>
+  </data>
+  <data name="SdeleteNotFound" xml:space="preserve">
+    <value>Die ausführbare SDelete-Datei wurde nicht gefunden</value>
+  </data>
+  <data name="RunCommandStarted" xml:space="preserve">
+    <value>~ Befehl wird ausgeführt</value>
+  </data>
+  <data name="RunCommandCompleted" xml:space="preserve">
+    <value>~ Beendet mit Code {0}</value>
+  </data>
+  <data name="RunCommandError" xml:space="preserve">
+    <value>~ Startfehler: {0}</value>
+  </data>
+  <data name="OpenPathToolTip" xml:space="preserve">
+    <value>Im Explorer anzeigen</value>
+  </data>
+  <data name="BlockedPathsTitle" xml:space="preserve">
+    <value>Pfad nicht hinzugefügt</value>
+  </data>
+  <data name="BlockedPathsText" xml:space="preserve">
+    <value>System- und systemkritische Ordner oder Dateien können nicht zur Löschliste hinzugefügt werden</value>
+  </data>
+  <data name="BlockedPathsMore" xml:space="preserve">
+    <value>…und {0} weitere</value>
+  </data>
+  <data name="BlockedPathsClose" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DriveTypeSsd" xml:space="preserve">
+    <value>SSD</value>
+  </data>
+  <data name="DriveTypeHdd" xml:space="preserve">
+    <value>HDD</value>
+  </data>
+  <data name="DriveTypeFlash" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="DriveTypeNetwork" xml:space="preserve">
+    <value>Netz</value>
+  </data>
+  <data name="DriveTypeCdRom" xml:space="preserve">
+    <value>CD</value>
+  </data>
+  <data name="DriveTypeRam" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="FlashWarningTitle" xml:space="preserve">
+    <value>Warnung</value>
+  </data>
+  <data name="FlashWarningText" xml:space="preserve">
+    <value>Sie haben ein {0}-Speichermedium ausgewählt. Die Verwendung von SDelete auf solchen Laufwerken garantiert nicht, dass die Daten vernichtet werden. Das Bereinigen des Laufwerks kann den Verschleiß des {0}-Speichermediums erheblich beschleunigen.</value>
+  </data>
+  <data name="DialogOkButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PathsStats" xml:space="preserve">
+    <value>Dateien: {0} · Ordner: {1} · {2}</value>
+  </data>
+  <data name="PathsStatsCounting" xml:space="preserve">
+    <value>Zählung läuft… Dateien: {0} · Ordner: {1} · {2}</value>
+  </data>
+  <data name="PathsStatsStopped" xml:space="preserve">
+    <value>Zählung abgebrochen: Dateien {0} · Ordner {1} · {2} (unvollständige Daten)</value>
+  </data>
+  <data name="UnitB" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="UnitKB" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="UnitTB" xml:space="preserve">
+    <value>TB</value>
+  </data>
+  <data name="UnitGB" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="UnitMB" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="NotifyCompletedTitle" xml:space="preserve">
+    <value>Vorgang abgeschlossen</value>
+  </data>
+  <data name="NotifyStoppedTitle" xml:space="preserve">
+    <value>Vorgang angehalten</value>
+  </data>
+  <data name="NotifyErrorTitle" xml:space="preserve">
+    <value>Vorgang mit Fehler beendet</value>
+  </data>
+  <data name="NotifyBody" xml:space="preserve">
+    <value>Dauer: {0}</value>
+  </data>
+  <data name="AuthorName" xml:space="preserve">
+    <value>Yalla Nkardaz</value>
+  </data>
+</root>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+    <data name="AppWindowTitle" xml:space="preserve">
+    <value>Interfață pentru ștergere sigură</value>
+  </data>
+  <data name="FileDeletionTab.Header" xml:space="preserve">
+    <value>Ștergerea fișierelor</value>
+  </data>
+  <data name="CleanFreeSpaceTab.Header" xml:space="preserve">
+    <value>Curățarea spațiului liber</value>
+  </data>
+  <data name="PathsHeader.Text" xml:space="preserve">
+    <value>Căi</value>
+  </data>
+  <data name="EmptyPathsHint.Text" xml:space="preserve">
+    <value>Nu au fost adăugate căi</value>
+  </data>
+  <data name="AddFilesButton.Content" xml:space="preserve">
+    <value>Adaugă fișier(e)</value>
+  </data>
+  <data name="AddFolderButton.Content" xml:space="preserve">
+    <value>Adaugă folder</value>
+  </data>
+  <data name="ClearPathsButton.Content" xml:space="preserve">
+    <value>Golește</value>
+  </data>
+  <data name="RecurseCheckBox.Content" xml:space="preserve">
+    <value>Recursiv</value>
+  </data>
+  <data name="RemoveReadOnlyCheckBox.Content" xml:space="preserve">
+    <value>Elimină atributul „doar în citire”</value>
+  </data>
+  <data name="DropToAddCaption" xml:space="preserve">
+    <value>Adaugă în lista de ștergere</value>
+  </data>
+  <data name="DrivesHeader.Text" xml:space="preserve">
+    <value>Unități și dispozitive</value>
+  </data>
+  <data name="RefreshDrivesButton.Content" xml:space="preserve">
+    <value>Reîmprospătează</value>
+  </data>
+  <data name="CleanModeLabel.Text" xml:space="preserve">
+    <value>Mod de curățare:</value>
+  </data>
+  <data name="ZeroFillRadio.Content" xml:space="preserve">
+    <value>Umple cu zerouri</value>
+  </data>
+  <data name="HideNotRecommendedCheckBox.Content" xml:space="preserve">
+    <value>Ascunde elementele nerecomandate</value>
+  </data>
+  <data name="EmptyDrivesHintFilteredText" xml:space="preserve">
+    <value>Toate unitățile sunt ascunse de filtrul „Ascunde elementele nerecomandate”. Debifați caseta pentru a le vedea.</value>
+  </data>
+  <data name="EmptyDrivesHintNoneText" xml:space="preserve">
+    <value>Nu a fost găsită nicio unitate.</value>
+  </data>
+  <data name="CleanFreeRadio.Content" xml:space="preserve">
+    <value>Curăță</value>
+  </data>
+  <data name="Use64BitCheckBox.Content" xml:space="preserve">
+    <value>Versiune pe 64 de biți</value>
+  </data>
+  <data name="PassesLabel.Text" xml:space="preserve">
+    <value>Treceri:</value>
+  </data>
+  <data name="SdeleteFolderLabel.Text" xml:space="preserve">
+    <value>Director SDelete:</value>
+  </data>
+  <data name="SdeleteFolderTextBox.PlaceholderText" xml:space="preserve">
+    <value>Lăsați gol dacă SDelete se află în PATH</value>
+  </data>
+  <data name="BrowseSdeleteFolderButton.Content" xml:space="preserve">
+    <value>Răsfoire…</value>
+  </data>
+  <data name="ConfirmDialog.Title" xml:space="preserve">
+    <value>Confirmare</value>
+  </data>
+  <data name="ConfirmDialog.PrimaryButtonText" xml:space="preserve">
+    <value>Da</value>
+  </data>
+  <data name="ConfirmDialog.CloseButtonText" xml:space="preserve">
+    <value>Nu</value>
+  </data>
+  <data name="RunButton" xml:space="preserve">
+    <value>Pornește</value>
+  </data>
+  <data name="StopButton" xml:space="preserve">
+    <value>Întrerupe</value>
+  </data>
+  <data name="LocalDisk" xml:space="preserve">
+    <value>Disc local</value>
+  </data>
+  <data name="ContentsOnlyCheckBox" xml:space="preserve">
+    <value>Doar conținutul</value>
+  </data>
+  <data name="ChangePathButton" xml:space="preserve">
+    <value>Schimbă</value>
+  </data>
+  <data name="ValidationPassesTooSmall" xml:space="preserve">
+    <value>Numărul de treceri trebuie să fie cel puțin 1.</value>
+  </data>
+  <data name="ValidationNoPaths" xml:space="preserve">
+    <value>Adăugați cel puțin o cale pentru ștergere.</value>
+  </data>
+  <data name="ValidationNoDrives" xml:space="preserve">
+    <value>Selectați cel puțin o unitate.</value>
+  </data>
+  <data name="CommandCannotBeBuilt" xml:space="preserve">
+    <value>Comanda nu poate fi construită:</value>
+  </data>
+  <data name="CommandBuildInternalError" xml:space="preserve">
+    <value>[Eroare internă la construirea comenzii]</value>
+  </data>
+  <data name="ConfirmDialogDeleteFilesText" xml:space="preserve">
+    <value>Rularea acestei comenzi va distruge ireversibil fișierele și folderele selectate. Chiar și cu instrumente de recuperare a fișierelor șterse nu le veți putea restaura.
+
+Doriți să continuați?</value>
+  </data>
+  <data name="ConfirmDialogCleanFreeSpaceText" xml:space="preserve">
+    <value>Rularea acestei comenzi va porni curățarea spațiului liber de pe unitățile selectate. În funcție de capacitatea unității și de cantitatea de spațiu liber, procesul poate dura mult, până la 10 ore sau mai mult.
+
+Nu folosiți unitățile selectate în acest timp. Ștergerea sigură va umple temporar tot spațiul liber de pe ele.
+
+Notă: dacă operațiunea este întreruptă, pe unitate pot rămâne fișiere temporare care ocupă tot spațiul liber. Acestea vor trebui șterse manual (de obicei sunt fișiere cu numele SDELTEMP și SDELMFT în rădăcina unității). Fișierele pot fi ascunse.
+
+Doriți să continuați?</value>
+  </data>
+  <data name="ConfirmDialogYesCountdown" xml:space="preserve">
+    <value>Da ({0})</value>
+  </data>
+  <data name="ConfirmDialogYes" xml:space="preserve">
+    <value>Da</value>
+  </data>
+  <data name="CloseWhileRunningTitle" xml:space="preserve">
+    <value>Procesul rulează</value>
+  </data>
+  <data name="CloseWhileRunningText" xml:space="preserve">
+    <value>SDelete încă rulează. Dacă închideți fereastra, procesul va fi întrerupt. Acest lucru poate lăsa fișiere temporare pe unitate.
+
+Doriți să întrerupeți și să ieșiți?</value>
+  </data>
+  <data name="CloseWhileRunningYes" xml:space="preserve">
+    <value>Întrerupe și ieși</value>
+  </data>
+  <data name="CloseWhileRunningNo" xml:space="preserve">
+    <value>Rămâi</value>
+  </data>
+  <data name="SdeleteNotFound" xml:space="preserve">
+    <value>Fișierul executabil SDelete nu a fost găsit</value>
+  </data>
+  <data name="RunCommandStarted" xml:space="preserve">
+    <value>~ Se execută comanda</value>
+  </data>
+  <data name="RunCommandCompleted" xml:space="preserve">
+    <value>~ Finalizat cu codul {0}</value>
+  </data>
+  <data name="RunCommandError" xml:space="preserve">
+    <value>~ Eroare la pornire: {0}</value>
+  </data>
+  <data name="OpenPathToolTip" xml:space="preserve">
+    <value>Afișează în Explorer</value>
+  </data>
+  <data name="BlockedPathsTitle" xml:space="preserve">
+    <value>Calea nu a fost adăugată</value>
+  </data>
+  <data name="BlockedPathsText" xml:space="preserve">
+    <value>Folderele sau fișierele de sistem și cele critice pentru funcționarea sistemului nu pot fi adăugate în lista de ștergere</value>
+  </data>
+  <data name="BlockedPathsMore" xml:space="preserve">
+    <value>…și încă {0}</value>
+  </data>
+  <data name="BlockedPathsClose" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DriveTypeSsd" xml:space="preserve">
+    <value>SSD</value>
+  </data>
+  <data name="DriveTypeHdd" xml:space="preserve">
+    <value>HDD</value>
+  </data>
+  <data name="DriveTypeFlash" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="DriveTypeNetwork" xml:space="preserve">
+    <value>Rețea</value>
+  </data>
+  <data name="DriveTypeCdRom" xml:space="preserve">
+    <value>CD</value>
+  </data>
+  <data name="DriveTypeRam" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="FlashWarningTitle" xml:space="preserve">
+    <value>Avertisment</value>
+  </data>
+  <data name="FlashWarningText" xml:space="preserve">
+    <value>Ați selectat un dispozitiv de stocare {0}. Utilizarea SDelete pe astfel de unități nu garantează distrugerea datelor. Curățarea unității poate accelera semnificativ uzura dispozitivului de stocare {0}.</value>
+  </data>
+  <data name="DialogOkButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PathsStats" xml:space="preserve">
+    <value>Fișiere: {0} · Foldere: {1} · {2}</value>
+  </data>
+  <data name="PathsStatsCounting" xml:space="preserve">
+    <value>Se numără… fișiere: {0} · foldere: {1} · {2}</value>
+  </data>
+  <data name="PathsStatsStopped" xml:space="preserve">
+    <value>Numărare oprită: fișiere {0} · foldere {1} · {2} (date incomplete)</value>
+  </data>
+  <data name="UnitB" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="UnitKB" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="UnitTB" xml:space="preserve">
+    <value>TB</value>
+  </data>
+  <data name="UnitGB" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="UnitMB" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="NotifyCompletedTitle" xml:space="preserve">
+    <value>Operațiune finalizată</value>
+  </data>
+  <data name="NotifyStoppedTitle" xml:space="preserve">
+    <value>Operațiune oprită</value>
+  </data>
+  <data name="NotifyErrorTitle" xml:space="preserve">
+    <value>Operațiunea a eșuat</value>
+  </data>
+  <data name="NotifyBody" xml:space="preserve">
+    <value>Durată: {0}</value>
+  </data>
+  <data name="AuthorName" xml:space="preserve">
+    <value>Yalla Nkardaz</value>
+  </data>
+</root>

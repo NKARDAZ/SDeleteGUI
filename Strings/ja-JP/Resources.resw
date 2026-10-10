@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+    <data name="AppWindowTitle" xml:space="preserve">
+    <value>セキュア削除インターフェース</value>
+  </data>
+  <data name="FileDeletionTab.Header" xml:space="preserve">
+    <value>ファイルの削除</value>
+  </data>
+  <data name="CleanFreeSpaceTab.Header" xml:space="preserve">
+    <value>空き領域のクリーニング</value>
+  </data>
+  <data name="PathsHeader.Text" xml:space="preserve">
+    <value>パス</value>
+  </data>
+  <data name="EmptyPathsHint.Text" xml:space="preserve">
+    <value>パスが追加されていません</value>
+  </data>
+  <data name="AddFilesButton.Content" xml:space="preserve">
+    <value>ファイルを追加</value>
+  </data>
+  <data name="AddFolderButton.Content" xml:space="preserve">
+    <value>フォルダーを追加</value>
+  </data>
+  <data name="ClearPathsButton.Content" xml:space="preserve">
+    <value>クリア</value>
+  </data>
+  <data name="RecurseCheckBox.Content" xml:space="preserve">
+    <value>サブフォルダーを含める</value>
+  </data>
+  <data name="RemoveReadOnlyCheckBox.Content" xml:space="preserve">
+    <value>「読み取り専用」属性を解除する</value>
+  </data>
+  <data name="DropToAddCaption" xml:space="preserve">
+    <value>削除リストに追加</value>
+  </data>
+  <data name="DrivesHeader.Text" xml:space="preserve">
+    <value>ドライブとデバイス</value>
+  </data>
+  <data name="RefreshDrivesButton.Content" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="CleanModeLabel.Text" xml:space="preserve">
+    <value>クリーニング方法:</value>
+  </data>
+  <data name="ZeroFillRadio.Content" xml:space="preserve">
+    <value>ゼロで埋める</value>
+  </data>
+  <data name="HideNotRecommendedCheckBox.Content" xml:space="preserve">
+    <value>非推奨を非表示</value>
+  </data>
+  <data name="EmptyDrivesHintFilteredText" xml:space="preserve">
+    <value>「非推奨を非表示」フィルターによりすべてのドライブが非表示になっています。チェックを外すと表示されます。</value>
+  </data>
+  <data name="EmptyDrivesHintNoneText" xml:space="preserve">
+    <value>ドライブが見つかりません。</value>
+  </data>
+  <data name="CleanFreeRadio.Content" xml:space="preserve">
+    <value>クリーニング</value>
+  </data>
+  <data name="Use64BitCheckBox.Content" xml:space="preserve">
+    <value>64 ビット版</value>
+  </data>
+  <data name="PassesLabel.Text" xml:space="preserve">
+    <value>パス回数:</value>
+  </data>
+  <data name="SdeleteFolderLabel.Text" xml:space="preserve">
+    <value>SDelete のフォルダー:</value>
+  </data>
+  <data name="SdeleteFolderTextBox.PlaceholderText" xml:space="preserve">
+    <value>SDelete が PATH にある場合は空のままにしてください</value>
+  </data>
+  <data name="BrowseSdeleteFolderButton.Content" xml:space="preserve">
+    <value>参照…</value>
+  </data>
+  <data name="ConfirmDialog.Title" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="ConfirmDialog.PrimaryButtonText" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="ConfirmDialog.CloseButtonText" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="RunButton" xml:space="preserve">
+    <value>実行</value>
+  </data>
+  <data name="StopButton" xml:space="preserve">
+    <value>中断</value>
+  </data>
+  <data name="LocalDisk" xml:space="preserve">
+    <value>ローカル ディスク</value>
+  </data>
+  <data name="ContentsOnlyCheckBox" xml:space="preserve">
+    <value>内容のみ</value>
+  </data>
+  <data name="ChangePathButton" xml:space="preserve">
+    <value>変更</value>
+  </data>
+  <data name="ValidationPassesTooSmall" xml:space="preserve">
+    <value>パス回数は 1 以上にしてください。</value>
+  </data>
+  <data name="ValidationNoPaths" xml:space="preserve">
+    <value>削除するパスを 1 つ以上追加してください。</value>
+  </data>
+  <data name="ValidationNoDrives" xml:space="preserve">
+    <value>ドライブを 1 つ以上選択してください。</value>
+  </data>
+  <data name="CommandCannotBeBuilt" xml:space="preserve">
+    <value>コマンドを生成できません:</value>
+  </data>
+  <data name="CommandBuildInternalError" xml:space="preserve">
+    <value>[コマンドの生成中に内部エラーが発生しました]</value>
+  </data>
+  <data name="ConfirmDialogDeleteFilesText" xml:space="preserve">
+    <value>このコマンドを実行すると、選択したファイルとフォルダーが完全に消去され、元に戻せません。削除したファイルの復元ツールを使っても復元できません。
+
+続行しますか？</value>
+  </data>
+  <data name="ConfirmDialogCleanFreeSpaceText" xml:space="preserve">
+    <value>このコマンドを実行すると、選択したドライブの空き領域のクリーニングが開始されます。ドライブの容量と空き領域のサイズによっては、処理に長時間 (最大 10 時間以上) かかることがあります。
+
+この間は、選択したドライブを使用しないでください。セキュア削除により、ドライブの空き領域が一時的にすべて埋められます。
+
+注意: 処理が中断された場合、空き領域をすべて占有する一時ファイルがドライブに残ることがあります。その場合は手動で削除する必要があります (通常は、ドライブのルートにある SDELTEMP、SDELMFT という名前のファイルです)。これらのファイルは隠しファイルになっていることがあります。
+
+続行しますか？</value>
+  </data>
+  <data name="ConfirmDialogYesCountdown" xml:space="preserve">
+    <value>はい ({0})</value>
+  </data>
+  <data name="ConfirmDialogYes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="CloseWhileRunningTitle" xml:space="preserve">
+    <value>処理を実行中です</value>
+  </data>
+  <data name="CloseWhileRunningText" xml:space="preserve">
+    <value>SDelete はまだ実行中です。ウィンドウを閉じると、処理が中断されます。ドライブに一時ファイルが残る場合があります。
+
+中断して終了しますか？</value>
+  </data>
+  <data name="CloseWhileRunningYes" xml:space="preserve">
+    <value>中断して終了</value>
+  </data>
+  <data name="CloseWhileRunningNo" xml:space="preserve">
+    <value>終了しない</value>
+  </data>
+  <data name="SdeleteNotFound" xml:space="preserve">
+    <value>SDelete の実行ファイルが見つかりません</value>
+  </data>
+  <data name="RunCommandStarted" xml:space="preserve">
+    <value>~ コマンドを実行します</value>
+  </data>
+  <data name="RunCommandCompleted" xml:space="preserve">
+    <value>~ コード {0} で終了しました</value>
+  </data>
+  <data name="RunCommandError" xml:space="preserve">
+    <value>~ 起動エラー: {0}</value>
+  </data>
+  <data name="OpenPathToolTip" xml:space="preserve">
+    <value>エクスプローラーで表示</value>
+  </data>
+  <data name="BlockedPathsTitle" xml:space="preserve">
+    <value>パスは追加されませんでした</value>
+  </data>
+  <data name="BlockedPathsText" xml:space="preserve">
+    <value>システムまたはシステムの動作に不可欠なフォルダーやファイルは、削除リストに追加できません</value>
+  </data>
+  <data name="BlockedPathsMore" xml:space="preserve">
+    <value>…ほか {0} 件</value>
+  </data>
+  <data name="BlockedPathsClose" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DriveTypeSsd" xml:space="preserve">
+    <value>SSD</value>
+  </data>
+  <data name="DriveTypeHdd" xml:space="preserve">
+    <value>HDD</value>
+  </data>
+  <data name="DriveTypeFlash" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="DriveTypeNetwork" xml:space="preserve">
+    <value>ネット</value>
+  </data>
+  <data name="DriveTypeCdRom" xml:space="preserve">
+    <value>CD</value>
+  </data>
+  <data name="DriveTypeRam" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="FlashWarningTitle" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="FlashWarningText" xml:space="preserve">
+    <value>{0} ストレージを選択しました。このようなドライブで SDelete を使用しても、データが確実に消去される保証はありません。ドライブのクリーニングにより、{0} ストレージの摩耗が大幅に早まる可能性があります。</value>
+  </data>
+  <data name="DialogOkButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PathsStats" xml:space="preserve">
+    <value>ファイル: {0} · フォルダー: {1} · {2}</value>
+  </data>
+  <data name="PathsStatsCounting" xml:space="preserve">
+    <value>集計中… ファイル: {0} · フォルダー: {1} · {2}</value>
+  </data>
+  <data name="PathsStatsStopped" xml:space="preserve">
+    <value>集計を中断しました: ファイル {0} · フォルダー {1} · {2} (不完全なデータ)</value>
+  </data>
+  <data name="UnitB" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="UnitKB" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="UnitTB" xml:space="preserve">
+    <value>TB</value>
+  </data>
+  <data name="UnitGB" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="UnitMB" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="NotifyCompletedTitle" xml:space="preserve">
+    <value>処理が完了しました</value>
+  </data>
+  <data name="NotifyStoppedTitle" xml:space="preserve">
+    <value>処理を停止しました</value>
+  </data>
+  <data name="NotifyErrorTitle" xml:space="preserve">
+    <value>処理がエラーで終了しました</value>
+  </data>
+  <data name="NotifyBody" xml:space="preserve">
+    <value>所要時間: {0}</value>
+  </data>
+  <data name="AuthorName" xml:space="preserve">
+    <value>ヤーラ・ヌカルダズ</value>
+  </data>
+</root>
