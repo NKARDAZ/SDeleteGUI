@@ -38,6 +38,7 @@ public sealed partial class MainPage
 				TotalSize = drive.TotalSize,
 				FreeSpace = drive.TotalFreeSpace,
 				IsRecommendedForClean = kind is not (DriveKind.Ssd or DriveKind.Flash or DriveKind.Network or DriveKind.CdRom),
+				CapacityText = $"{SizeFormatter.Format(drive.TotalSize - drive.TotalFreeSpace)} / {SizeFormatter.Format(drive.TotalSize)}",
 			});
 		}
 	}

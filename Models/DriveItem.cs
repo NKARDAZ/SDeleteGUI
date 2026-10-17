@@ -15,24 +15,10 @@ public class DriveItem
 	public long TotalSize { get; set; }
 	public long FreeSpace { get; set; }
 	public string TypeLabel { get; set; } = string.Empty;
+	public string CapacityText { get; set; } = string.Empty;
 	public bool IsFlashBased { get; set; }
 	public bool IsRecommendedForClean { get; set; } = true;
 
 	public double UsedPercent =>
 		TotalSize > 0 ? (double)(TotalSize - FreeSpace) / TotalSize * 100 : 0;
-
-	public string CapacityText =>
-		$"{FormatBytes(TotalSize - FreeSpace)} / {FormatBytes(TotalSize)}";
-
-	private static string FormatBytes(long bytes)
-	{
-		double gb = bytes / 1024d / 1024d / 1024d;
-		double tb = gb / 1024d;
-		return
-			tb >= 1
-			? $"{tb:0.#} {Services.Loc.Get("UnitTB")}"
-			: gb >= 1
-			? $"{gb:0.#} {Services.Loc.Get("UnitGB")}"
-			: $"{bytes / 1024d / 1024d:0.#} {Services.Loc.Get("UnitMB")}";
-	}
 }
